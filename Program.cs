@@ -22,18 +22,18 @@ namespace Unit15_6_6
             Console.WriteLine(string.Join(" ", allStudents));
         }
 
-        public class Classroom
-        {
-            public List<string> Students = new List<string>();
-        }
 
         static string[] GetAllStudents(Classroom[] classes)
         {
-            var allStudents = from c in classes
+            // Решение с помощью LING-запроса.
+            var allStudents_0 = from c in classes
                               from s in c.Students
                               select s;
 
-            return allStudents.ToArray();
+            // Решение с помощью методов расширения.
+            var allStudents_1 = classes.SelectMany(c=>c.Students);
+
+            return allStudents_1.ToArray();
         }
     }
 }
