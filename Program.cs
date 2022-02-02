@@ -15,6 +15,7 @@ namespace Unit15_6_6
                new Classroom { Students = {"Evgeniy", "Sergey", "Andrew"} },
                new Classroom { Students = {"Anna", "Viktor", "Vladimir"} },
                new Classroom { Students = {"Bulat", "Alex", "Galina"} }
+
             };
 
             var allStudents = GetAllStudents(classes);
